@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="301affe5-5d98-4d52-b070-36829052ffe9" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExportToHTMLSettings">
+    <option name="printScope" value="1" />
+    <option name="OUTPUT_DIRECTORY" value="$PROJECT_DIR$/../PresindetParserLogicUnit\exportToHTML" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+        <option value="Enum" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1YcgIR02YkpH6Az3hb6DdbhNyHG" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="D:/IDE/JavaSDK/commons-math3-3.6.1.jar!/" />
+    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.22758621" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="zelosin.pack.Data" />
+      <recent name="zelosin.pack.Configurations.Query" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\theze\Desktop\PresindetParserLogicUnit\src\zelosin\pack\Data" />
+      <recent name="C:\Users\theze\Desktop\PresindetParserLogicUnit\src\zelosin\pack" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="zelosin.pack.base.Main" />
+      <module name="PresindetParserLogicUnit" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="301affe5-5d98-4d52-b070-36829052ffe9" name="Default Changelist" comment="" />
+      <created>1583247216739</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1583247216739</updated>
+      <workItem from="1583247221851" duration="6597000" />
+      <workItem from="1583263754998" duration="7224000" />
+      <workItem from="1583502530834" duration="25415000" />
+      <workItem from="1583660793021" duration="20675000" />
+      <workItem from="1583749181422" duration="9981000" />
+      <workItem from="1583763722625" duration="5862000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="765" y="237" key="#com.intellij.ide.util.MemberChooser" timestamp="1583770413463">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="765" y="237" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1583770413463" />
+    <state x="504" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1583769862855">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="504" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1583769862855" />
+    <state width="839" height="466" key="DebuggerActiveHint" timestamp="1583772312812">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="839" height="466" key="DebuggerActiveHint/0.0.1920.1040@0.0.1920.1040" timestamp="1583772312812" />
+    <state x="773" y="293" key="FileChooserDialogImpl" timestamp="1583754611109">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="773" y="293" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1583754611109" />
+    <state width="1860" height="259" key="GridCell.Tab.0.bottom" timestamp="1583780953497">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1860" height="259" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1583780953497" />
+    <state width="1860" height="259" key="GridCell.Tab.0.center" timestamp="1583780953497">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1860" height="259" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1583780953497" />
+    <state width="1860" height="259" key="GridCell.Tab.0.left" timestamp="1583780953497">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1860" height="259" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1583780953497" />
+    <state width="1860" height="259" key="GridCell.Tab.0.right" timestamp="1583780953497">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1860" height="259" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1583780953497" />
+    <state width="1877" height="239" key="GridCell.Tab.1.bottom" timestamp="1583780953385">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="239" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1583780953385" />
+    <state width="1877" height="239" key="GridCell.Tab.1.center" timestamp="1583780953384">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="239" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1583780953384" />
+    <state width="1877" height="239" key="GridCell.Tab.1.left" timestamp="1583780953384">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="239" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1583780953384" />
+    <state width="1877" height="239" key="GridCell.Tab.1.right" timestamp="1583780953385">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="239" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1583780953385" />
+    <state x="540" y="256" key="IDE.errors.dialog" timestamp="1583754786728">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="540" y="256" key="IDE.errors.dialog/0.0.1920.1040@0.0.1920.1040" timestamp="1583754786728" />
+    <state x="547" y="126" key="SettingsEditor" timestamp="1583680114291">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="547" y="126" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1583680114291" />
+    <state width="968" height="528" key="XDebugger.FullValuePopup" timestamp="1583526818070">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="968" height="528" key="XDebugger.FullValuePopup/0.0.1920.1040@0.0.1920.1040" timestamp="1583526818070" />
+    <state x="656" y="345" key="com.intellij.ide.util.TipDialog" timestamp="1583660799539">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="656" y="345" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1583660799539" />
+    <state x="616" y="240" key="run.anything.popup" timestamp="1583750886345">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="616" y="240" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1583750886345" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1583521433920">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1583521433920" />
+  </component>
+  <component name="XDebuggerManager">
+    <watches-manager>
+      <configuration name="Application">
+        <watch expression="tScienceWork" language="JAVA" />
+        <watch expression="((HashMap)tScienceWork.mScienceWorkInformation).entrySet().toArray()[3]" custom="java.util.HashMap" />
+      </configuration>
+    </watches-manager>
+  </component>
+</project>
