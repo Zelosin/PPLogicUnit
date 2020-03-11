@@ -26,6 +26,40 @@ public class PSUService {
 
     private static Document mMemberWorksDocument;
 
+    public static class AsyncPSUScienceWorkPageParseTask implements Runnable{
+        public ScienceWork mCurrentScienceWork;
+        public QueryTypeAction mQueryType;
+
+        public AsyncPSUScienceWorkPageParseTask(ScienceWork mCurrentScienceWork, QueryTypeAction mQueryType) {
+            this.mCurrentScienceWork = mCurrentScienceWork;
+            this.mQueryType = mQueryType;
+        }
+
+        @Override
+        public void run() {
+            ScienceWork.parsePSUScienceWorkPage(mCurrentScienceWork, mQueryType);
+        }
+    }
+
+    public static class AsyncPSUProfilePageParseTask implements Runnable{
+        public DepartmentMember mCurrentDepartmentMember;
+        public QueryTypeAction mQueryType;
+
+        public AsyncPSUProfilePageParseTask(DepartmentMember mCurrentDepartmentMember, QueryTypeAction mQueryType) {
+            this.mCurrentDepartmentMember = mCurrentDepartmentMember;
+            this.mQueryType = mQueryType;
+        }
+
+        @Override
+        public void run() {
+            assignScienceWorksToDepartmentMember(
+                    mQueryType,
+                    mCurrentDepartmentMember
+            );
+        }
+    }
+
+
     public static Document makeJSOUPQuery(String pURL) {
         Document mReturningDocument = null;
         System.setProperty("javax.net.ssl.trustStore", "/path/to/web2.uconn.edu.jks");
@@ -80,12 +114,21 @@ public class PSUService {
                     getPersonProfileLinkFromGroupList(value);
             });
         }
+
+        ArrayList<Thread> mAsyncParseThreadArrayList = new ArrayList<>();
         DepartmentMember.mDepartmentMembersList.forEach((key, value) ->{
-            assignScienceWorksToDepartmentMember(
-                    pQueryType,
-                    value
-            );
+            Thread tThread = new Thread(new AsyncPSUProfilePageParseTask(value, pQueryType));
+            mAsyncParseThreadArrayList.add(tThread);
+            tThread.start();
         });
+        mAsyncParseThreadArrayList.forEach(tThread ->{
+            try {
+                tThread.join();
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        });
+
     }
 
     public static void assignScienceWorksToDepartmentMember(QueryTypeAction pQueryType, DepartmentMember tDepartmentMember) {
@@ -167,33 +210,7 @@ public class PSUService {
         }
     }
 
-    private static void parsePSUScienceWorkPage(ScienceWork tScienceWork, QueryTypeAction pQueryType){
-        Document mCurrentDocument = PSUService.makeJSOUPQuery(tScienceWork.getmScienceWorkLink());
-        String tKey;
-        tScienceWork.mScienceWorkInformation.put(QueryConfigurations.QueryConfiguration.getVariable(pQueryType, "Наименование:"), mCurrentDocument.select("h1").last().text());
 
-        for(Element tTableElement : mCurrentDocument.select("tr")) {
-            tKey = tTableElement.select("td").first().text();
-            if(tKey.equals("Авторы (ПГУ):")) {
-                tScienceWork.mScienceWorkInformation.put(
-                        QueryConfigurations.QueryConfiguration.getVariable(pQueryType, tKey),
-                        tTableElement.select("td").last().text().replaceAll("\\s\\[\\d+\\]", "")
-                );
-                continue;
-            }
-            if (tKey.equals("Место хранения:") || tKey.equals("Категория:"))
-                tScienceWork.mScienceWorkInformation.put(
-                        QueryConfigurations.QueryConfiguration.getVariable(pQueryType, tKey),
-                        tTableElement.select("td").last().previousElementSibling().text()
-                );
-            else
-                tScienceWork.mScienceWorkInformation.put(
-                        QueryConfigurations.QueryConfiguration.getVariable(pQueryType, tKey),
-                        tTableElement.select("td").last().text()
-                );
-        }
-
-    }
 
     public static void parseScienceWorkPageByQueryType(QueryTypeAction pQueryType){
         DepartmentMember.mDepartmentMembersList.forEach((tName, tMember) ->{
@@ -202,16 +219,30 @@ public class PSUService {
             }
             else
                 tMember.mMemberInformationList.row(pQueryType).forEach((tSectionName, tScienceWorkArray)-> {
-                    tScienceWorkArray.forEach((tWork) -> parsePSUScienceWorkPage(tWork, pQueryType));
+                    tScienceWorkArray.forEach((tWork) -> ScienceWork.parsePSUScienceWorkPage(tWork, pQueryType));
                 });
         });
     }
 
     public static void parseScienceWorkPageByQueryTypeAndSectionName(QueryTypeAction pQueryType, String pSectionName){
+        ArrayList<Thread> mAsyncParseThreadArrayList = new ArrayList<>();
         DepartmentMember.mDepartmentMembersList.forEach((tName, tMember) ->{
             var tScienceWorkArray = tMember.mMemberInformationList.get(pQueryType, pSectionName);
-            if(tScienceWorkArray != null)
-                tScienceWorkArray.forEach((tWork) -> parsePSUScienceWorkPage(tWork, pQueryType));
+            if(tScienceWorkArray != null) {
+                mAsyncParseThreadArrayList.clear();
+                tScienceWorkArray.forEach((tWork) -> {
+                    Thread tThread = new Thread(new AsyncPSUScienceWorkPageParseTask(tWork, pQueryType));
+                    mAsyncParseThreadArrayList.add(tThread);
+                    tThread.start();
+                });
+                mAsyncParseThreadArrayList.forEach(tThread ->{
+                    try {
+                        tThread.join();
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+                });
+            }
         });
     }
 }
