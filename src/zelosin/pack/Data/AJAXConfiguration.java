@@ -17,7 +17,7 @@ public class AJAXConfiguration {
     }
 
     public AJAXConfiguration(String mAssignName, String pURLPart, String pVariableName, QueryTypeAction pQueryType) {
-        var tQueryMap = mAJAXConfigurationsList.get(pQueryType);
+        Multimap<String, String> tQueryMap = mAJAXConfigurationsList.get(pQueryType);
         tQueryMap.put(mAssignName, pURLPart);
         tQueryMap.put(mAssignName, pVariableName);
     }

@@ -157,7 +157,7 @@ public class XMLService {
 
     public static void parseQueryConfigurationSection(Document pParsingDocument){
         Element mQueryTypeListElement = pParsingDocument.selectFirst("query_configurations_list");
-        Map<QueryTypeAction, String> tQueryTypeMap = new HashMap<>(){{
+        Map<QueryTypeAction, String> tQueryTypeMap = new HashMap<QueryTypeAction, String>(){{
             put(QueryTypeAction.Resource, "resource_query");
             put(QueryTypeAction.Document, "document_query");
             put(QueryTypeAction.NIR, "nir_query");

@@ -173,7 +173,7 @@ public class PSUService {
             case NIR: {parseMembersSection("#collapseNir", pQueryType, tDepartmentMember);; break;}
             case RID: {parseMembersSection("#collapseRid", pQueryType, tDepartmentMember);; break;}
             case ALL: {
-                Map<QueryTypeAction, String> tCSSMap = new HashMap<>(){{
+                Map<QueryTypeAction, String> tCSSMap = new HashMap<QueryTypeAction, String>(){{
                     put(QueryTypeAction.Resource, "#collapseIR");
                     put(QueryTypeAction.Document, "#collapseDoc");
                     put(QueryTypeAction.NIR, "#collapseNir");
@@ -194,7 +194,7 @@ public class PSUService {
         tWorkElements = tWorkElements.first().select(".btn.btn-link");
         Document tWorkDocument;
         for (Element tWorkType : tWorkElements) {
-            var tAJAXParam = AJAXConfiguration.mAJAXConfigurationsList.get(pQueryType).get(tWorkType.text()).toArray();
+            Object[] tAJAXParam = AJAXConfiguration.mAJAXConfigurationsList.get(pQueryType).get(tWorkType.text()).toArray();
             if(tAJAXParam.length == 0)
                 continue;
             tWorkDocument = PSUService.makeAJAXQueryForDepartmentMember(
@@ -246,11 +246,11 @@ public class PSUService {
     public static void parseScienceWorkPageByQueryTypeAndSectionName(QueryTypeAction pQueryType, String pSectionName){
         ArrayList<Thread> mAsyncParseThreadArrayList = new ArrayList<>();
         DepartmentMember.mDepartmentMembersList.forEach((tName, tMember) ->{
-            var tScienceWorkArray = tMember.mMemberInformationList.get(pQueryType, pSectionName);
+            ArrayList tScienceWorkArray = tMember.mMemberInformationList.get(pQueryType, pSectionName);
             if(tScienceWorkArray != null) {
                 mAsyncParseThreadArrayList.clear();
                 tScienceWorkArray.forEach((tWork) -> {
-                    Thread tThread = new Thread(new AsyncPSUScienceWorkPageParseTask(tWork, pQueryType));
+                    Thread tThread = new Thread(new AsyncPSUScienceWorkPageParseTask((ScienceWork) tWork, pQueryType));
                     mAsyncParseThreadArrayList.add(tThread);
                     tThread.start();
                 });

@@ -9,10 +9,12 @@ import org.apache.poi.ss.usermodel.*;
 import zelosin.pack.Configurations.Form.CellStyle;
 import zelosin.pack.Configurations.Form.SheetConfigurations;
 import zelosin.pack.Data.DepartmentMember;
+import zelosin.pack.Data.ScienceWork.ScienceWork;
 
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.util.ArrayList;
 
 public class ExcelService {
     private static FileOutputStream mOutputStream = null;
@@ -21,6 +23,7 @@ public class ExcelService {
 
     private static HSSFSheet mCurrentSheet = null;
     private static HSSFRow tCurrentRow = null;
+    private static int tCellRow = 0;
 
     public static void fillExcelCell(int pRow, int pColumn, String pValue, String mStyleLink){
         tCurrentRow = mCurrentSheet.getRow(pRow);
@@ -66,9 +69,7 @@ public class ExcelService {
     }
 
     public static void writeSheetToExcelFileByColumnConfiguration(String pFilePath) {
-        var lambdaContext = new Object() {
-            int tCellRow = 0;
-        };
+
         openStreams(pFilePath);
         SheetConfigurations.mSheetConfigurationsList.forEach( tConfig ->{
             mCurrentSheet = mWorkBook.createSheet(tConfig.mSheetName);
@@ -77,14 +78,14 @@ public class ExcelService {
             });
 
             tConfig.mTableFormConfigurations.forEach(tCell ->{
-                lambdaContext.tCellRow = tCell.mDisplayRow;
+                ExcelService.tCellRow = tCell.mDisplayRow;
                 fillExcelCell(tCell.mDisplayRow, tCell.mDisplayColumn, tCell.mDisplayText, tCell.mStyleLink);
 
 
                 DepartmentMember.mDepartmentMembersList.forEach((key, tMember) ->{
 
                     for(String mParam : tCell.mSectionName.split("::")) {
-                        var tScienceWorkArray = tMember.mMemberInformationList.get(tCell.mQueryType, mParam);
+                        ArrayList<ScienceWork> tScienceWorkArray = tMember.mMemberInformationList.get(tCell.mQueryType, mParam);
                         if(tScienceWorkArray != null) {
                             tScienceWorkArray.forEach(tScienceWork -> {
                                 try {
@@ -94,8 +95,8 @@ public class ExcelService {
                                     return;
                                 }
 
-                                lambdaContext.tCellRow++;
-                                fillExcelCell(lambdaContext.tCellRow, tCell.mDisplayColumn, tScienceWork.mScienceWorkInformation.get(tCell.mVariable), tCell.mStyleLink);
+                                ExcelService.tCellRow++;
+                                fillExcelCell( ExcelService.tCellRow, tCell.mDisplayColumn, tScienceWork.mScienceWorkInformation.get(tCell.mVariable), tCell.mStyleLink);
                             });
                         }
                     }

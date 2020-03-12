@@ -24,12 +24,12 @@ public class QueryConfigurations {
             this.mVariable = pVariable;
             this.mAssignName = pAssignName;
             this.mIsAble = pIsAble;
-            var tArray = mQueryConfigurationsList.computeIfAbsent(pQueryType, k -> new ArrayList<>());
+            ArrayList tArray = mQueryConfigurationsList.computeIfAbsent(pQueryType, k -> new ArrayList<>());
             tArray.add(this);
         }
 
         public static String getAssignName(QueryTypeAction pQueryType, String pVariable) {
-            var tArray = mQueryConfigurationsList.get(pQueryType);
+            ArrayList<QueryConfiguration> tArray = mQueryConfigurationsList.get(pQueryType);
             for (QueryConfiguration tConfig : tArray) {
                 if (pVariable.equals(tConfig.mVariable)) return tConfig.mAssignName;
             }
@@ -37,7 +37,7 @@ public class QueryConfigurations {
         }
 
         public static String getVariable(QueryTypeAction pQueryType, String pAssignName) {
-            var tArray = mQueryConfigurationsList.get(pQueryType);
+            ArrayList<QueryConfiguration> tArray = mQueryConfigurationsList.get(pQueryType);
             for (QueryConfiguration tConfig : tArray) {
                 if (pAssignName.equals(tConfig.mAssignName)) return tConfig.mVariable;
             }

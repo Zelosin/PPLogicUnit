@@ -29,7 +29,7 @@ public class CellStyle {
 
 
     public static CellStyle getStyle(String pStyleName){
-        var tReturningValue = mCellStyleList.get(pStyleName);
+        CellStyle tReturningValue = mCellStyleList.get(pStyleName);
         if(tReturningValue == null)
             tReturningValue = mCellStyleList.get("Basic");
         return tReturningValue;
