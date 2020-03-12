@@ -4,6 +4,7 @@ import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.parser.Parser;
+import zelosin.pack.Configurations.Form.CellStyle;
 import zelosin.pack.Configurations.Form.FilterAction;
 import zelosin.pack.Configurations.Form.FilterType;
 import zelosin.pack.Configurations.Form.SheetConfigurations;
@@ -70,16 +71,13 @@ public class XMLService {
         Element mGeneralListElement = pParsingDocument.selectFirst("general");
         for(Element mGeneralElement : mGeneralListElement.children())
             switch (mGeneralElement.tagName()){
-                case("department_link"): {
-                    QueryConfigurations.mSessionDepartmentLink = mGeneralElement.attr("link");
-                    break;
-                }
-                case("list_of_study_groups"): {
-                    QueryConfigurations.mGroupListLink = mGeneralElement.attr("link");
-                    break;
-                }
-                case("profile_service"): {
-                    QueryConfigurations.mProfileService = mGeneralElement.attr("link");
+                case("psu_query_settings"): {
+                    QueryConfigurations.mSessionDepartmentLink = mGeneralElement.attr("department_link");
+                    QueryConfigurations.mGroupListLink = mGeneralElement.attr("list_of_study_groups_link");
+                    QueryConfigurations.mProfileService = mGeneralElement.attr("profile_service_link");
+                    QueryConfigurations.mQueryType = QueryTypeAction.valueOf(mGeneralElement.attr("query_type"));
+                    QueryConfigurations.mParseType =  QueryTypeAction.valueOf(mGeneralElement.attr("parse_type"));
+                    QueryConfigurations.mExportPath = mGeneralElement.attr("export_path");
                     break;
                 }
             }
@@ -98,7 +96,19 @@ public class XMLService {
     }
 
     public static void parseForExcelSheets(Document pParsingDocument) {
-        Element mSheetList = pParsingDocument.selectFirst("excel_configurations_list");
+        for(Element mStylesList : pParsingDocument.selectFirst("excel_styles").children())
+            new CellStyle(
+                    mStylesList.attr("Name"),
+                    mStylesList.attr("FontFamily"),
+                    mStylesList.attr("Color"),
+                    Integer.valueOf(mStylesList.attr("ColumnWidth")),
+                    Integer.valueOf(mStylesList.attr("FontSize")),
+                    Boolean.valueOf(mStylesList.attr("Wrappable")),
+                    Boolean.valueOf(mStylesList.attr("Italic")),
+                    Boolean.valueOf(mStylesList.attr("Bold")),
+                    Boolean.valueOf(mStylesList.attr("UnderLine"))
+                    );
+        Element mSheetList = pParsingDocument.selectFirst("sheets_list");
         for(Element tSheetElement : mSheetList.children()){
             SheetConfigurations tCurrentSheet = new SheetConfigurations(tSheetElement.attr("name"), false);
 
@@ -120,14 +130,15 @@ public class XMLService {
                             tTableConfig.attr("variable"),
                             Integer.valueOf(tTableConfig.attr("column")),
                             Integer.valueOf(tTableConfig.attr("row")),
-                            Integer.valueOf(tTableConfig.attr("column_width")));
+                            tTableConfig.attr("style"));
                             break;
                     }
                     case("label"):{
                         tCurrentSheet.new SimpleLabel(
                                 tTableConfig.attr("display_text"),
                                 Integer.parseInt(tTableConfig.attr("row")),
-                                Integer.parseInt(tTableConfig.attr("column"))
+                                Integer.parseInt(tTableConfig.attr("column")),
+                                tTableConfig.attr("style")
                         );
                         break;
                     }

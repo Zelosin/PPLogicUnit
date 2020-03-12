@@ -10,6 +10,11 @@ public class QueryConfigurations {
     public static String mGroupListLink;
     public static String mProfileService;
 
+    public static QueryTypeAction mQueryType;
+    public static QueryTypeAction mParseType;
+    public static String mExportPath;
+
+
     public static class QueryConfiguration {
         public String mVariable, mAssignName;
         public boolean mIsAble;

@@ -3,7 +3,11 @@ package zelosin.pack.Configurations.Form;
 import zelosin.pack.Configurations.Query.QueryTypeAction;
 import zelosin.pack.Data.ScienceWork.ScienceWork;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
+import java.util.Locale;
 
 public class SheetConfigurations {
 
@@ -13,16 +17,17 @@ public class SheetConfigurations {
     public static ArrayList<SheetConfigurations> mSheetConfigurationsList = new ArrayList<>();
     public ArrayList<SheetFilter> mSheetFiltersList = new ArrayList<>();
     public ArrayList<SimpleLabel> mLabelsList = new ArrayList<>();
+    private static final SimpleDateFormat DATE_FORMAT = new SimpleDateFormat("dd.MM.yyyy", Locale.UK);
 
     public class TableFormConfigurations{
 
-        public Integer mColumnWidth, mDisplayColumn, mDisplayRow;
-        public String mDisplayText, mVariable, mSectionName;
+        public Integer mDisplayColumn, mDisplayRow;
+        public String mStyleLink, mDisplayText, mVariable, mSectionName;
         public QueryTypeAction mQueryType;
 
         public TableFormConfigurations(String mDisplayText, QueryTypeAction mQueryType, String mSectionName, String mVariable,
-                                       Integer mDisplayColumn, Integer mDisplayRow, Integer mColumnWidth) {
-            this.mColumnWidth = mColumnWidth;
+                                       Integer mDisplayColumn, Integer mDisplayRow, String mStyleLink) {
+            this.mStyleLink = mStyleLink;
             this.mDisplayColumn = mDisplayColumn;
             this.mDisplayRow = mDisplayRow;
             this.mDisplayText = mDisplayText;
@@ -33,13 +38,14 @@ public class SheetConfigurations {
         }
     }
     public class SimpleLabel {
-        public String mDisplayText;
+        public String mDisplayText, mStyleLink;
         public int mDisplayRow, mDisplayColumn;
 
-        public SimpleLabel(String mText, int mRow, int mColumn) {
+        public SimpleLabel(String mText, int mRow, int mColumn, String mStyleLink) {
             this.mDisplayText = mText;
             this.mDisplayRow = mRow;
             this.mDisplayColumn = mColumn;
+            this.mStyleLink = mStyleLink;
             mLabelsList.add(this);
         }
     }
@@ -63,25 +69,57 @@ public class SheetConfigurations {
         mSheetConfigurationsList.add(this);
     }
     public boolean verifyScienceWork(ScienceWork pScienceWork) throws NullPointerException{
+        boolean tRetuningValue = true;
         for (SheetFilter tFilter : mSheetFiltersList) {
             switch (tFilter.mFilterType){
                 case StringCompare: {
                     switch (tFilter.mFilterAction){
                         case NotEqual:{
-                            if(pScienceWork.mScienceWorkInformation.get(tFilter.mVariable).equals(tFilter.mComparableValue))
-                                return false;
-                            break;
+                            for(String mParam : tFilter.mComparableValue.split("::")) {
+                                if (pScienceWork.mScienceWorkInformation.get(tFilter.mVariable).equals(mParam))
+                                    tRetuningValue = false;
+                            }
+                            return tRetuningValue;
                         }
                         default:
                         case Equal:{
-                            if(!pScienceWork.mScienceWorkInformation.get(tFilter.mVariable).equals(tFilter.mComparableValue))
-                                return false;
-                            break;
+                            for(String mParam : tFilter.mComparableValue.split("::")) {
+                                if (pScienceWork.mScienceWorkInformation.get(tFilter.mVariable).equals(mParam))
+                                    return true;
+                            }
                         }
                     }
-                    break;
                 }
-                case DateCompare: {break;}
+                case DateCompare: {
+                    switch (tFilter.mFilterAction){
+                        case BiggestThan:{
+                            try {
+                                if(!(DATE_FORMAT.parse(pScienceWork.mScienceWorkInformation.get(tFilter.mVariable)).after(
+                                        DATE_FORMAT.parse(tFilter.mComparableValue)
+                                        )))
+                                    return false;
+                            } catch (ParseException e) {
+                                e.printStackTrace();
+                            }
+                            break;
+                        }
+                        case LessThan:{
+                            try {
+                                if(DATE_FORMAT.parse(pScienceWork.mScienceWorkInformation.get(tFilter.mVariable))
+                                        .after(
+                                                DATE_FORMAT.parse(tFilter.mComparableValue)
+                                        ))
+                                    return false;
+                            } catch (ParseException e) {
+                                e.printStackTrace();
+                            }
+                            break;
+                        }
+                        default:
+                            return false;
+                    }
+
+            }
             }
         }
         return true;

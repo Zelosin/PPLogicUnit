@@ -2,7 +2,7 @@ package zelosin.pack.Configurations.Form;
 
 public enum FilterAction {
     Equal,
-    BiggestThan,
+        BiggestThan,
     LessThan,
     NotEqual
 }

@@ -211,17 +211,36 @@ public class PSUService {
     }
 
 
+    private static void parseScienceWorkPageByQueryType(QueryTypeAction pQueryType, DepartmentMember tMember) {
+        ArrayList<Thread> mAsyncParseThreadArrayList = new ArrayList<>();
+        tMember.mMemberInformationList.row(pQueryType).forEach((tSectionName, tScienceWorkArray)-> {
+            mAsyncParseThreadArrayList.clear();
+            tScienceWorkArray.forEach((tWork) -> {
+                Thread tThread = new Thread(new AsyncPSUScienceWorkPageParseTask(tWork, pQueryType));
+                mAsyncParseThreadArrayList.add(tThread);
+                tThread.start();
+            });
+            mAsyncParseThreadArrayList.forEach(tThread ->{
+                try {
+                    tThread.join();
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+            });
+        });
+    }
 
     public static void parseScienceWorkPageByQueryType(QueryTypeAction pQueryType){
-        DepartmentMember.mDepartmentMembersList.forEach((tName, tMember) ->{
-            if(pQueryType.equals(QueryTypeAction.ALL)){
-                // TODO
-            }
-            else
-                tMember.mMemberInformationList.row(pQueryType).forEach((tSectionName, tScienceWorkArray)-> {
-                    tScienceWorkArray.forEach((tWork) -> ScienceWork.parsePSUScienceWorkPage(tWork, pQueryType));
-                });
-        });
+        if(pQueryType.equals(QueryTypeAction.ALL)){
+            DepartmentMember.mDepartmentMembersList.forEach((tName, tMember) -> {
+                parseScienceWorkPageByQueryType(QueryTypeAction.Resource, tMember);
+                parseScienceWorkPageByQueryType(QueryTypeAction.Document, tMember);
+                parseScienceWorkPageByQueryType(QueryTypeAction.NIR, tMember);
+                parseScienceWorkPageByQueryType(QueryTypeAction.RID, tMember);
+            });
+        }
+        else
+            DepartmentMember.mDepartmentMembersList.forEach((tName, tMember) -> parseScienceWorkPageByQueryType(pQueryType, tMember));
     }
 
     public static void parseScienceWorkPageByQueryTypeAndSectionName(QueryTypeAction pQueryType, String pSectionName){

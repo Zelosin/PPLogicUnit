@@ -2,34 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="301affe5-5d98-4d52-b070-36829052ffe9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/zelosin/pack/Configurations/Form/CellStyle.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/QueryConfiguration.xml" beforeDir="false" afterPath="$PROJECT_DIR$/QueryConfiguration.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PresindetParserLogicUnit/META-INF/PresindetParserLogicUnit.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PresindetParserLogicUnit/zelosin/pack/Configurations/Form/FilterAction.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PresindetParserLogicUnit/zelosin/pack/Configurations/Form/FilterType.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PresindetParserLogicUnit/zelosin/pack/Configurations/Form/SheetConfigurations$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PresindetParserLogicUnit/zelosin/pack/Configurations/Form/SheetConfigurations$SheetFilter.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PresindetParserLogicUnit/zelosin/pack/Configurations/Form/SheetConfigurations$SimpleLabel.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PresindetParserLogicUnit/zelosin/pack/Configurations/Form/SheetConfigurations$TableFormConfigurations.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PresindetParserLogicUnit/zelosin/pack/Configurations/Form/SheetConfigurations.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PresindetParserLogicUnit/zelosin/pack/Configurations/Query/QueryConfigurations$QueryConfiguration.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PresindetParserLogicUnit/zelosin/pack/Configurations/Query/QueryConfigurations.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PresindetParserLogicUnit/zelosin/pack/Configurations/Query/QueryTypeAction.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PresindetParserLogicUnit/zelosin/pack/Data/AJAXConfiguration.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PresindetParserLogicUnit/zelosin/pack/Data/Abstract/DepartmentMemberInformation.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PresindetParserLogicUnit/zelosin/pack/Data/DepartmentMember.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PresindetParserLogicUnit/zelosin/pack/Data/ScienceWork/ScienceWork.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PresindetParserLogicUnit/zelosin/pack/Services/ExcelService$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PresindetParserLogicUnit/zelosin/pack/Services/ExcelService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PresindetParserLogicUnit/zelosin/pack/Services/PSUService$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PresindetParserLogicUnit/zelosin/pack/Services/PSUService$2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PresindetParserLogicUnit/zelosin/pack/Services/PSUService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PresindetParserLogicUnit/zelosin/pack/Services/XMLService$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PresindetParserLogicUnit/zelosin/pack/Services/XMLService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PresindetParserLogicUnit/zelosin/pack/base/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/zelosin/pack/Data/ScienceWork/ScienceWork.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/zelosin/pack/Data/ScienceWork/ScienceWork.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PresindetParserLogicUnit/zelosin/pack/Configurations/Form/SheetConfigurations$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PresindetParserLogicUnit/zelosin/pack/Configurations/Form/SheetConfigurations$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PresindetParserLogicUnit/zelosin/pack/Configurations/Form/SheetConfigurations$SheetFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PresindetParserLogicUnit/zelosin/pack/Configurations/Form/SheetConfigurations$SheetFilter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PresindetParserLogicUnit/zelosin/pack/Configurations/Form/SheetConfigurations$SimpleLabel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PresindetParserLogicUnit/zelosin/pack/Configurations/Form/SheetConfigurations$SimpleLabel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PresindetParserLogicUnit/zelosin/pack/Configurations/Form/SheetConfigurations$TableFormConfigurations.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PresindetParserLogicUnit/zelosin/pack/Configurations/Form/SheetConfigurations$TableFormConfigurations.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PresindetParserLogicUnit/zelosin/pack/Configurations/Form/SheetConfigurations.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PresindetParserLogicUnit/zelosin/pack/Configurations/Form/SheetConfigurations.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PresindetParserLogicUnit/zelosin/pack/Services/ExcelService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PresindetParserLogicUnit/zelosin/pack/Services/ExcelService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PresindetParserLogicUnit/zelosin/pack/Services/PSUService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PresindetParserLogicUnit/zelosin/pack/Services/PSUService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PresindetParserLogicUnit/zelosin/pack/Services/XMLService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PresindetParserLogicUnit/zelosin/pack/Services/XMLService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PresindetParserLogicUnit/zelosin/pack/base/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PresindetParserLogicUnit/zelosin/pack/base/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/zelosin/pack/Configurations/Form/FilterAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/zelosin/pack/Configurations/Form/FilterAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/zelosin/pack/Configurations/Form/SheetConfigurations.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/zelosin/pack/Configurations/Form/SheetConfigurations.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/zelosin/pack/Configurations/Query/QueryConfigurations.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/zelosin/pack/Configurations/Query/QueryConfigurations.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/zelosin/pack/Services/ExcelService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/zelosin/pack/Services/ExcelService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/zelosin/pack/Services/PSUService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/zelosin/pack/Services/PSUService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/zelosin/pack/Services/XMLService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/zelosin/pack/Services/XMLService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/zelosin/pack/base/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/zelosin/pack/base/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test.xls" beforeDir="false" afterPath="$PROJECT_DIR$/test.xls" afterDir="false" />
     </list>
@@ -38,6 +28,20 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
   <component name="ExportToHTMLSettings">
     <option name="printScope" value="1" />
     <option name="OUTPUT_DIRECTORY" value="$PROJECT_DIR$/../PresindetParserLogicUnit\exportToHTML" />
@@ -45,8 +49,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Enum" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -112,7 +116,8 @@
       <workItem from="1583749181422" duration="9981000" />
       <workItem from="1583763722625" duration="5862000" />
       <workItem from="1583863899845" duration="1879000" />
-      <workItem from="1583927618069" duration="6931000" />
+      <workItem from="1583927618069" duration="11349000" />
+      <workItem from="1583993530894" duration="17886000" />
     </task>
     <servers />
   </component>
@@ -120,10 +125,10 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="765" y="237" key="#com.intellij.ide.util.MemberChooser" timestamp="1583932507586">
+    <state x="765" y="237" key="#com.intellij.ide.util.MemberChooser" timestamp="1584024617926">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="765" y="237" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1583932507586" />
+    <state x="765" y="237" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1584024617926" />
     <state x="797" y="335" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1583934224044">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -132,46 +137,50 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="504" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1583769862855" />
-    <state width="839" height="466" key="DebuggerActiveHint" timestamp="1583933910936">
+    <state x="542" y="115" key="CommitChangelistDialog2" timestamp="1583944833228">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="839" height="466" key="DebuggerActiveHint/0.0.1920.1040@0.0.1920.1040" timestamp="1583933910936" />
+    <state x="542" y="115" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1583944833228" />
+    <state width="839" height="466" key="DebuggerActiveHint" timestamp="1584028270667">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="839" height="466" key="DebuggerActiveHint/0.0.1920.1040@0.0.1920.1040" timestamp="1584028270667" />
     <state x="773" y="293" key="FileChooserDialogImpl" timestamp="1583935003851">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="773" y="293" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1583935003851" />
-    <state width="1877" height="220" key="GridCell.Tab.0.bottom" timestamp="1583934251967">
+    <state width="1877" height="220" key="GridCell.Tab.0.bottom" timestamp="1584029273360">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="220" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1583934251967" />
-    <state width="1877" height="220" key="GridCell.Tab.0.center" timestamp="1583934251967">
+    <state width="1877" height="220" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1584029273360" />
+    <state width="1877" height="220" key="GridCell.Tab.0.center" timestamp="1584029273360">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="220" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1583934251967" />
-    <state width="1877" height="220" key="GridCell.Tab.0.left" timestamp="1583934251967">
+    <state width="1877" height="220" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1584029273360" />
+    <state width="1877" height="220" key="GridCell.Tab.0.left" timestamp="1584029273360">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="220" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1583934251967" />
-    <state width="1877" height="220" key="GridCell.Tab.0.right" timestamp="1583934251967">
+    <state width="1877" height="220" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1584029273360" />
+    <state width="1877" height="220" key="GridCell.Tab.0.right" timestamp="1584029273360">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="220" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1583934251967" />
-    <state width="1877" height="239" key="GridCell.Tab.1.bottom" timestamp="1583933935666">
+    <state width="1877" height="220" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1584029273360" />
+    <state width="1877" height="206" key="GridCell.Tab.1.bottom" timestamp="1584028407666">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="239" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1583933935666" />
-    <state width="1877" height="239" key="GridCell.Tab.1.center" timestamp="1583933935665">
+    <state width="1877" height="206" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1584028407666" />
+    <state width="1877" height="206" key="GridCell.Tab.1.center" timestamp="1584028407666">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="239" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1583933935665" />
-    <state width="1877" height="239" key="GridCell.Tab.1.left" timestamp="1583933935665">
+    <state width="1877" height="206" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1584028407666" />
+    <state width="1877" height="206" key="GridCell.Tab.1.left" timestamp="1584028407666">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="239" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1583933935665" />
-    <state width="1877" height="239" key="GridCell.Tab.1.right" timestamp="1583933935665">
+    <state width="1877" height="206" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1584028407666" />
+    <state width="1877" height="206" key="GridCell.Tab.1.right" timestamp="1584028407666">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="239" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1583933935665" />
+    <state width="1877" height="206" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1584028407666" />
     <state x="540" y="256" key="IDE.errors.dialog" timestamp="1583754786728">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -180,29 +189,21 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="547" y="126" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1583935075797" />
-    <state width="968" height="528" key="XDebugger.FullValuePopup" timestamp="1583864580053">
+    <state width="968" height="528" key="XDebugger.FullValuePopup" timestamp="1583944618568">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="968" height="528" key="XDebugger.FullValuePopup/0.0.1920.1040@0.0.1920.1040" timestamp="1583864580053" />
-    <state x="656" y="345" key="com.intellij.ide.util.TipDialog" timestamp="1583927623672">
+    <state width="968" height="528" key="XDebugger.FullValuePopup/0.0.1920.1040@0.0.1920.1040" timestamp="1583944618568" />
+    <state x="656" y="345" key="com.intellij.ide.util.TipDialog" timestamp="1583993539963">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="656" y="345" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1583927623672" />
+    <state x="656" y="345" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1583993539963" />
     <state x="616" y="240" key="run.anything.popup" timestamp="1583750886345">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="616" y="240" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1583750886345" />
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1583521433920">
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1583997156687">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1583521433920" />
-  </component>
-  <component name="XDebuggerManager">
-    <watches-manager>
-      <configuration name="Application">
-        <watch expression="tScienceWork" language="JAVA" />
-        <watch expression="((HashMap)tScienceWork.mScienceWorkInformation).entrySet().toArray()[3]" custom="java.util.HashMap" />
-      </configuration>
-    </watches-manager>
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1583997156687" />
   </component>
 </project>

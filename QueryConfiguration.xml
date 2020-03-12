@@ -1,47 +1,19 @@
 <body>
 
     <general>
-        <department_link link= "https://vt.pnzgu.ru/employees"/>
-        <list_of_study_groups link= "https://lk.pnzgu.ru/portfolio/study_group"/>
-        <profile_service link= "https://lk.pnzgu.ru"/>
+        <psu_query_settings 
+            department_link = "https://vt.pnzgu.ru/employees"
+            list_of_study_groups_link = "https://lk.pnzgu.ru/portfolio/study_group"
+            profile_service_link  = "https://lk.pnzgu.ru"
+            query_type = "Resource"
+            parse_type = "Resource"
+            export_path = "C:\\Users\\theze\\Desktop\\PresindetParserLogicUnit\\test.xls"
+        />
     </general>
 
     <person_query_list>
         <person full_name = "Митрохин Максим Александрович"/>
-        <person full_name = "Гурин Евгений Иванович"/>
-        <person full_name = "Асыркина Тамара Алексеевна"/>	
-        <person full_name = "Бальзанникова Елена Алексеевна"/>
-        <person full_name = "Бикташев Равиль Айнулович"/>
-        <person full_name = "Болотова Елена Николаевна"/>
-        <person full_name = "Бычков Андрей Станиславович"/>
-        <person full_name = "Войнов Артем Сергеевич"/>
-        <person full_name = "Дорошенко Иван Николаевич"/>
-        <person full_name = "Дубинин Виктор Николаевич"/>
-        <person full_name = "Дубравин Алексей Викторович"/>
-        <person full_name = "Егоров Валерий Юрьевич"/>
-        <person full_name = "Захаров Сергей Михайлович"/>
-        <person full_name = "Зинкин Сергей Александрович"/>
-        <person full_name = "Игушкина Ольга Николаевна"/>
-        <person full_name = "Калиниченко Евгений Иванович"/>
-        <person full_name = "Карамышева Надежда Сергеевна"/>
-        <person full_name = "Коннов Максим Николаевич"/>
         <person full_name = "Коннов Николай Николаевич"/>
-        <person full_name = "Коннова Людмила Герасимовна"/>
-        <person full_name = "Кучин Алексей Викторович"/>
-        <person full_name = "Кшуманева Татьяна Ивановна"/>
-        <person full_name = "Никишин Кирилл Игоревич"/>
-        <person full_name = "Патунин Дмитрий Васильевич"/>
-        <person full_name = "Пащенко Дмитрий Владимирович"/>
-        <person full_name = "Попов Константин Владимирович"/>
-        <person full_name = "Пронин Александр Иванович"/>
-        <person full_name = "Сахаров Алексей Валентинович"/>
-        <person full_name = "Семенов Андрей Олегович"/>
-        <person full_name = "Синев Михаил Петрович"/>
-        <person full_name = "Слепцов Николай Владимирович"/>
-        <person full_name = "Танькова Ольга Николаевна"/>
-        <person full_name = "Токарев Андрей Николаевич"/>
-        <person full_name =  "Федюнин Роман Николаевич"/>
-        <person full_name =  "Юрова Ольга Викторовна"/>
     </person_query_list>
 
     <query_configurations_list>
@@ -209,40 +181,43 @@
     </ajax_url_list>
 
     <excel_configurations_list>
-        <sheet name = "Сотрудники" isWrappable = false >
-
-            <filters_list>
-                <filter type = "StringCompare" variable = "r_copyright_holder" action = "Equal" value = "ПГУ" >
-            </filters_list>
-
-            <sheet_body>
-                <label display_text = "Пример создание строки теекста1" column = 13  row = 1 />
-                <cell display_text = "Дата издания" query_type = "Resource" section_name = "r_article" 
-                    variable = "r_year_of_publish" column = 2  row = 1 column_width = 5000 />
-                <cell display_text = "Дата издания" query_type = "Resource" section_name = "r_article" 
-                    variable = "r_name" column = 1  row = 1 column_width = 5000 />
-                <cell display_text = "Правообладатель" query_type = "Resource" section_name = "r_article" 
-                    variable = "r_copyright_holder" column = 3  row = 1 column_width = 5000 />
-            </sheet_body>
-
-        </sheet>
-        <sheet name = "Сотрудники2" isWrappable = false >
-
-            <filters_list>
-                <filter type = "StringCompare" variable = "r_copyright_holder" action = "NotEqual" value = "ПГУ" >
-            </filters_list>
-
-            <sheet_body>
-                <label display_text = "Пример создание строки теекста1" column = 13  row = 1 />
-                <cell display_text = "Дата издания" query_type = "Resource" section_name = "r_article" 
-                    variable = "r_year_of_publish" column = 2  row = 1 column_width = 5000 />
-                <cell display_text = "Дата издания" query_type = "Resource" section_name = "r_article" 
-                    variable = "r_name" column = 1 row = 1 column_width = 5000 />
-                <cell display_text = "Правообладатель" query_type = "Resource" section_name = "r_article" 
-                    variable = "r_copyright_holder" column = 3 row = 1 column_width = 5000 />
-            </sheet_body>
-
-        </sheet>
+        <excel_styles>
+            <style Name = "Basic" FontFamily = "Calibri" Color = "BLACK" ColumnWidth = 5000 
+                FontSize = 11 Wrappable = "false" Italic = "false" Bold = "false" UnderLine = "false" />
+            <style Name = "RedGuardian" FontFamily = "Arial" Color = "RED" ColumnWidth = 10000 
+                FontSize = 14 Wrappable = "true" Italic = "true" Bold = "true" UnderLine = "false" />
+        </excel_styles>
+        <sheets_list>
+            <sheet name = "Сотрудники">
+                <filters_list>  
+                </filters_list>
+                <sheet_body>
+                    <label display_text = "Дата издания, раньше 29.09.19" column = 5  row = 1 />
+                    <cell display_text = "Дата издания" query_type = "Resource" section_name = "r_article::r_data_base" 
+                        variable = "r_owner" column = 4 row = 1 />
+                    <cell display_text = "Дата издания" query_type = "Resource" section_name = "r_article::r_data_base" 
+                        variable = "r_publish_date" column = 1 row = 1 />
+                    <cell display_text = "Правообладатель" query_type = "Resource" section_name = "r_article::r_data_base" 
+                        variable = "r_copyright_holder" column = 2 row = 1 />
+                    <cell display_text = "Дата издания" query_type = "Resource" section_name = "r_article::r_data_base" 
+                        variable = "r_name" column = 3 row = 1 />   
+                </sheet_body>
+            </sheet>
+            <sheet name = "Сотрудники2">
+                <filters_list>
+                    <filter type = "StringCompare" variable = "r_copyright_holder" action = "NotEqual" value = "ПГУ::ПГТУ" >
+                </filters_list>
+                <sheet_body>
+                    <label display_text = "Пример создание строки теекста1" column = 13  row = 1 />
+                    <cell display_text = "Дата издания" query_type = "Resource" section_name = "r_article" 
+                        variable = "r_year_of_publish" column = 2  row = 1 />
+                    <cell display_text = "Дата издания" query_type = "Resource" section_name = "r_article" 
+                        variable = "r_name" column = 1 row = 1 />
+                    <cell display_text = "Правообладатель" query_type = "Resource" section_name = "r_article" 
+                        variable = "r_copyright_holder" column = 3 row = 1 />
+                </sheet_body>
+            </sheet>
+        </sheets_list>
     </excel_configurations_list>
 
 </body>
