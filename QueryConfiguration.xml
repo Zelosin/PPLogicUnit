@@ -7,7 +7,7 @@
             profile_service_link  = "https://lk.pnzgu.ru"
             query_type = "Resource"
             parse_type = "Resource"
-            export_path = "C:\\Users\\theze\\Desktop\\PresindetParserLogicUnit\\test.xls"
+            export_path = "test.xls"
         />
     </general>
 
