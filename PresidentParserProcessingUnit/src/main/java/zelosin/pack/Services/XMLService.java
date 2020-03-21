@@ -13,16 +13,16 @@ import zelosin.pack.Configurations.Query.QueryTypeAction;
 import zelosin.pack.Data.AJAXConfiguration;
 import zelosin.pack.Data.DepartmentMember;
 
-import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.io.InputStream;
 import java.util.HashMap;
 import java.util.Map;
 
 public class XMLService {
 
-    private static FileInputStream mQueryFileStream;
+    private static InputStream mQueryFileStream;
     private static Document mQueryFileDocument;
 
     public static void secureFilesOpenCall(){
@@ -37,10 +37,13 @@ public class XMLService {
     }
 
     private static void openAllFileStream() throws FileNotFoundException {
-        mQueryFileStream = new FileInputStream(new File("QueryConfiguration.xml"));
+        mQueryFileStream = XMLService.class.getResourceAsStream("/resources/QueryConfiguration.xml");
+        if (mQueryFileStream == null) {
+            mQueryFileStream = XMLService.class.getClassLoader().getResourceAsStream("QueryConfiguration.xml");
+        }
     }
 
-    private static void getFileDocument(FileInputStream pFileStream) throws IOException {
+    private static void getFileDocument(InputStream pFileStream) throws IOException {
          mQueryFileDocument = Jsoup.parse(pFileStream, null, "", Parser.xmlParser());
     }
 

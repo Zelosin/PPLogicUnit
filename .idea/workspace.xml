@@ -1,7 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="029be3c1-b06d-4f01-bd1a-cfd7a928d143" name="Default Changelist" comment="" />
+    <list default="true" id="029be3c1-b06d-4f01-bd1a-cfd7a928d143" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/PresidentParserGraphicUnit/src/main/java/zelosin/pack/servingwebcontent/GreetingController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PresidentParserGraphicUnit/src/main/java/zelosin/pack/servingwebcontent/ServingWebContentApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PresidentParserGraphicUnit/src/main/resources/templates/greeting.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PresidentParserGraphicUnit/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/PresidentParserGraphicUnit/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PresidentParserProcessingUnit/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/PresidentParserProcessingUnit/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PresidentParserProcessingUnit/src/main/java/zelosin/pack/Services/PSUService.java" beforeDir="false" afterPath="$PROJECT_DIR$/PresidentParserProcessingUnit/src/main/java/zelosin/pack/Services/PSUService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PresidentParserProcessingUnit/src/main/java/zelosin/pack/Services/XMLService.java" beforeDir="false" afterPath="$PROJECT_DIR$/PresidentParserProcessingUnit/src/main/java/zelosin/pack/Services/XMLService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/QueryConfiguration.xml" beforeDir="false" afterPath="$PROJECT_DIR$/PresidentParserProcessingUnit/src/main/resources/QueryConfiguration.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -11,11 +23,12 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MavenImportPreferences">
     <option name="importingSettings">
@@ -25,7 +38,9 @@
     </option>
   </component>
   <component name="ProjectId" id="1ZOMAkiUwi2JtBR1dpA6DN1FJeM" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -33,20 +48,30 @@
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/PresidentParserProcessingUnit/src/main/java" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\theze\Desktop\PresidentParser\PresidentParserProcessingUnit\src\main\resources" />
+      <recent name="C:\Users\theze\Desktop\PresidentParser\PresidentParserProcessingUnit\src\main\resources\data" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\theze\Desktop\PresidentParser\PresidentParserProcessingUnit\src\main\java" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Main (1)">
+  <component name="RunManager" selected="Spring Boot.ServingWebContentApplication">
     <configuration name="Main (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="zelosin.pack.base.Main" />
       <module name="PresidentParserProcessingUnit" />
@@ -73,12 +98,29 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="ServingWebContentApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="PresidentParserGraphicUnit" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="zelosin.pack.servingwebcontent.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="zelosin.pack.servingwebcontent.ServingWebContentApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Spring Boot.ServingWebContentApplication" />
         <item itemvalue="Application.Main (1)" />
         <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
+  </component>
+  <component name="SpringBeansView">
+    <option name="beanDetailsProportion" value="0.3" />
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -91,7 +133,9 @@
       <option name="presentableId" value="Default" />
       <updated>1584705545436</updated>
       <workItem from="1584705548585" duration="20000" />
-      <workItem from="1584705608237" duration="1546000" />
+      <workItem from="1584705608237" duration="7436000" />
+      <workItem from="1584715384687" duration="7000" />
+      <workItem from="1584791453840" duration="3329000" />
     </task>
     <servers />
   </component>
@@ -107,45 +151,53 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="572" y="446" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1584706816291" />
-    <state width="1877" height="282" key="GridCell.Tab.0.bottom" timestamp="1584707187850">
+    <state width="1877" height="266" key="GridCell.Tab.0.bottom" timestamp="1584794794520">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1584707187850" />
-    <state width="1877" height="282" key="GridCell.Tab.0.center" timestamp="1584707187849">
+    <state width="1877" height="266" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1584794794520" />
+    <state width="1877" height="266" key="GridCell.Tab.0.center" timestamp="1584794794520">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1584707187849" />
-    <state width="1877" height="282" key="GridCell.Tab.0.left" timestamp="1584707187849">
+    <state width="1877" height="266" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1584794794520" />
+    <state width="1877" height="266" key="GridCell.Tab.0.left" timestamp="1584794794520">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1584707187849" />
-    <state width="1877" height="282" key="GridCell.Tab.0.right" timestamp="1584707187850">
+    <state width="1877" height="266" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1584794794520" />
+    <state width="1877" height="266" key="GridCell.Tab.0.right" timestamp="1584794794520">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1584707187850" />
-    <state width="1877" height="348" key="GridCell.Tab.1.bottom" timestamp="1584706326664">
+    <state width="1877" height="266" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1584794794520" />
+    <state width="1877" height="282" key="GridCell.Tab.1.bottom" timestamp="1584793411106">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1584706326664" />
-    <state width="1877" height="348" key="GridCell.Tab.1.center" timestamp="1584706326664">
+    <state width="1877" height="282" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1584793411106" />
+    <state width="1877" height="282" key="GridCell.Tab.1.center" timestamp="1584793411105">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1584706326664" />
-    <state width="1877" height="348" key="GridCell.Tab.1.left" timestamp="1584706326664">
+    <state width="1877" height="282" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1584793411105" />
+    <state width="1877" height="282" key="GridCell.Tab.1.left" timestamp="1584793411105">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1584706326664" />
-    <state width="1877" height="348" key="GridCell.Tab.1.right" timestamp="1584706326664">
+    <state width="1877" height="282" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1584793411105" />
+    <state width="1877" height="282" key="GridCell.Tab.1.right" timestamp="1584793411105">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1584706326664" />
+    <state width="1877" height="282" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1584793411105" />
+    <state x="461" y="163" key="SettingsEditor" timestamp="1584714572801">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="461" y="163" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1584714572801" />
+    <state x="656" y="345" key="com.intellij.ide.util.TipDialog" timestamp="1584715384677">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="656" y="345" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1584715384677" />
     <state x="477" y="228" key="new project wizard" timestamp="1584705934868">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="477" y="228" key="new project wizard/0.0.1920.1040@0.0.1920.1040" timestamp="1584705934868" />
-    <state x="616" y="240" key="run.anything.popup" timestamp="1584706305258">
+    <state x="616" y="240" key="run.anything.popup" timestamp="1584794152670">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="616" y="240" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1584706305258" />
+    <state x="616" y="240" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1584794152670" />
   </component>
 </project>

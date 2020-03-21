@@ -80,6 +80,7 @@ public class PSUService {
         Document mReturningDocument = null;
         try {
             mReturningDocument = Jsoup.connect(WORK_LIST_API + pProfileID + WORK_LIST_API_TYPE + pAJAXQuery)
+                    .validateTLSCertificates(false)
                     .userAgent("Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:25.0) Gecko/20100101 Firefox/25.0")
                     .referrer("http://www.google.com")
                     .ignoreHttpErrors(true)
